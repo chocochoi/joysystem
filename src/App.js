@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // import { NotFound } from './components/Errors';
 import Loading from './components/Loading';
 import Header from './components/Header';
+import IterationSample from './IterationSample';
 import './App.css';
 
 const Main = lazy(() => import('./containers/Main'));
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Suspense fallback={<Loading />}>
         <Switch>
+          <Route exact path="/" component={IterationSample} />
           <Route exact path="/main" component={Main} />
           <Route exact path="/sub01" component={Sub01} />
           {/* <Route exact path="/events/:slug" component={Event} />
