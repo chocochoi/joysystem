@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { PulseLoader } from 'react-spinners';
+import { PacmanLoader } from 'react-spinners';
 
 const Loading = props => (
   <div
@@ -12,7 +12,7 @@ const Loading = props => (
     `}
     {...props}
   >
-    <PulseLoader size={20} color={'#36D7B7'} />
+    <PacmanLoader size={20} color={'#36D7B7'} />
   </div>
 );
 

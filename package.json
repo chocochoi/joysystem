@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "emotion-reset": "^2.0.7",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.0",
     "prop-types": "^15.7.2",
@@ -30,7 +31,13 @@
     "rules": {
       "react/jsx-filename-extension": 0,
       "react/jsx-one-expression-per-line": 0,
-      "react/prefer-stateless-function": 0
+      "react/prefer-stateless-function": 0,
+      "import/prefer-default-export": 0,
+      "react/prop-types": 0,
+      "react/destructuring-assignment": 0,
+      "react/jsx-props-no-spreading": 0,
+      "react/jsx-curly-brace-presence": 0,
+      "react/no-array-index-key": 0
     },
     "env": {
       "browser": true
