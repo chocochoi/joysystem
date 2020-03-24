@@ -1,29 +1,30 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { Link } from 'react-router-dom';
-import emotionReset from 'emotion-reset';
+import Header from '../components/Header';
 
-const NavBar = props => {
-  return (
-    <div
-      css={css`
-        padding: 0.75rem;
-        background-color: ${props.bg || 'white'};
-        border-bottom: ${props.border || '#f5f5f5'};
-        height: 72px;
-      `}
-      {...props}
-    >
-      {props.children}
-    </div>
-  );
-};
+// const NavBar = props => {
+//   return (
+//     <div
+//       css={css`
+//         padding: 0.75rem;
+//         background-color: ${props.bg || 'white'};
+//         border-bottom: ${props.border || '#f5f5f5'};
+//         height: 72px;
+//         a {
+//           padding: 0 20px;
+//         }
+//       `}
+//       {...props}
+//     >
+//       {props.children}
+//     </div>
+//   );
+// };
 
 export const Layout = props => {
   return (
     <div
       css={css`
-        ${emotionReset}
         position: relative;
         margin: 0;
         padding: 0;
@@ -31,12 +32,7 @@ export const Layout = props => {
       `}
       {...props}
     >
-      <NavBar>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/events/12">Event</Link>
-        <Link to="/nono">NoRoute</Link>
-      </NavBar>
+      <Header />
       {props.children}
     </div>
   );

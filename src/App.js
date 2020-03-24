@@ -1,22 +1,25 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ResetCss from './styles/ResetCss';
 // import { NotFound } from './components/Errors';
 import Loading from './components/Loading';
-import Header from './components/Header';
 import IterationSample from './IterationSample';
 import './App.css';
 
-const Main = lazy(() => import('./containers/Main'));
-const Sub01 = lazy(() => import('./containers/Sub01'));
+const Main = lazy(() => import('./pages/Main'));
+const Sub01 = lazy(() => import('./pages/Sub01'));
+const BranchInformation = lazy(() => import('./pages/BranchInformation'));
 
 function App() {
   return (
     <BrowserRouter basename="/">
-      <Header />
+      <ResetCss />
       <Suspense fallback={<Loading />}>
         <Switch>
-          <Route exact path="/" component={IterationSample} />
-          <Route exact path="/main" component={Main} />
+          <Route exact path="/" component={Main} />
+          <Route exact path="/BranchInformation" component={BranchInformation} />
+
+          <Route exact path="/IterationSample" component={IterationSample} />
           <Route exact path="/sub01" component={Sub01} />
           {/* <Route exact path="/events/:slug" component={Event} />
           <Route exact path="/login" component={Login} /> */}
