@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 // const NavBar = props => {
 //   return (
@@ -26,14 +27,19 @@ export const Layout = props => {
     <div
       css={css`
         position: relative;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
       `}
       {...props}
     >
       <Header />
-      {props.children}
+      <div
+        css={css`
+          position: relative;
+          min-height: 600px;
+        `}
+      >
+        {props.children}
+      </div>
+      <Footer />
     </div>
   );
 };
