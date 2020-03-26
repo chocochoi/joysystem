@@ -10,6 +10,15 @@ function ResetCss() {
         License: none (public domain)
         */
 
+        *,
+        *:before,
+        *:after {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
         html,
         body,
         div,
