@@ -5,6 +5,8 @@ import ResetCss from './styles/ResetCss';
 import Loading from './components/Loading';
 import IterationSample from './IterationSample';
 import './App.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Main = lazy(() => import('./pages/Main'));
 const Sub01 = lazy(() => import('./pages/Sub01'));

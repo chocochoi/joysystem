@@ -22,7 +22,7 @@ import Footer from '../components/Footer';
 //   );
 // };
 
-export const Layout = props => {
+export const Layout = (props) => {
   return (
     <div
       css={css`

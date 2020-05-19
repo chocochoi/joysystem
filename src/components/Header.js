@@ -6,12 +6,14 @@ import { Link } from 'react-router-dom';
 import { IoIosMenu, IoMdCloseCircle } from 'react-icons/io';
 
 const sizePoints = [320, 640, 1200];
-const mq = sizePoints.map(sp => `@media (max-width:${sp}px)`);
+const mq = sizePoints.map((sp) => `@media (max-width:${sp}px)`);
 
 const cssHeader = css`
   position: relative;
+  z-index: 100;
   height: 60px;
   border-bottom: 1px solid #c9c9c9;
+  background: #fff;
   h1 {
     position: absolute;
     top: 17px;
