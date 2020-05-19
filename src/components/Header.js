@@ -5,7 +5,7 @@ import { jsx, css } from '@emotion/core';
 import { Link } from 'react-router-dom';
 import { IoIosMenu, IoMdCloseCircle } from 'react-icons/io';
 
-const sizePoints = [320, 640, 1200];
+const sizePoints = [320, 640, 800, 1200];
 const mq = sizePoints.map((sp) => `@media (max-width:${sp}px)`);
 
 const cssHeader = css`
@@ -47,7 +47,7 @@ const cssHeader = css`
   }
   ${mq[0]} {
   }
-  ${mq[1]} {
+  ${mq[2]} {
     h1 {
       position: relative;
       text-align: center;
@@ -143,13 +143,16 @@ function Header() {
       <div
         className="gnb"
         css={css`
-          ${mq[1]} {
+          ${mq[2]} {
             display: ${display};
           }
         `}
       >
         <div className="menu_list">
           <Link to="/BranchInformation">지점관리</Link>
+          <Link to="/Sub01">Sub01</Link>
+          <Link to="/Sub01">aboutus</Link>
+          <Link to="/Sub01">Sub01</Link>
           <Link to="/Sub01">Sub01</Link>
         </div>
         <div className="user_info">

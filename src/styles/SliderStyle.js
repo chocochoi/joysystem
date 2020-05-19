@@ -10,7 +10,7 @@ const dynamicStyle = (props) =>
 const SliderStyle = styled.div`
   img {
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.7;
     transition: all 0.3s ease;
     padding: 3%;
     margin: 10px;
